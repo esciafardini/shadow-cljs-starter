@@ -1,0 +1,14 @@
+{
+  "name": "my-project",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "shadow-cljs": "2.26.2"
+  },
+  "dependencies": {
+    "install": "^0.13.0",
+    "npm": "^10.2.4",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  }
+}

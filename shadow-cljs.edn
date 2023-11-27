@@ -1,0 +1,18 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ [[reagent "1.1.1"]]
+
+ :dev-http {8880 "public"}
+
+ ; :app is a build id
+ ; :browser is target’s type for generated JavaScript files
+ ; :main is a name of generated JavaScript file
+ ; core is a ClojureScript entry namespace
+ :builds
+ {:app {:target :browser
+        :modules {:main {:entries [core]}}}}}
