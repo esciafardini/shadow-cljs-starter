@@ -21,7 +21,7 @@
 (defn postal-code []
   [:div.postal-code
    [:h3 "Enter your postal code"]
-   [:input {:type "text"
+   [:input {:type "number"
             :placeholder "Postal Code"
             :value (:postal-code @app-state)
             :on-change #(swap! app-state assoc :postal-code (-> % .-target .-value))}]
@@ -40,5 +40,3 @@
 (defn ^:dev/after-load main []
   (let [app-node (.getElementById js/document "app")]
     (rdom/render [app] app-node)))
-
-(main)
