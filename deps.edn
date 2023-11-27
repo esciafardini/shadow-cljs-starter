@@ -1,0 +1,10 @@
+{:paths ["src/clj" "src/cljs"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        org.clojure/clojurescript {:mvn/version "1.11.60"}}
+ :aliases {:cljs {:extra-deps {binaryage/devtools {:mvn/version "1.0.7"}
+                               cider/cider-nrepl {:mvn/version "0.21.0"}
+                               cljs-ajax/cljs-ajax {:mvn/version "0.8.4"}
+                               reagent/reagent {:mvn/version "1.2.0"}
+                               thheller/shadow-cljs {:mvn/version "2.25.2"}}}
+           :repl {:extra-deps {nrepl/nrepl {:mvn/version,"0.8.3"},cider/cider-nrepl {:mvn/version,"0.26.0"}}
+                  :main-opts  ["-m" "nrepl.cmdline" "--middleware" "[cider.nrepl/cider-middleware]"]}}}

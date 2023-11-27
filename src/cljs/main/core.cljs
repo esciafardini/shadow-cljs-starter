@@ -1,6 +1,6 @@
-(ns core (:require
-          [reagent.core :as r]
-          [reagent.dom :as rdom]))
+(ns main.core (:require
+               [reagent.core :as r]
+               [reagent.dom :as rdom]))
 
 (defonce app-state (r/atom {:title "WhichWeather"
                             :postal-code ""
@@ -37,6 +37,6 @@
       [temperature temp])]
    [postal-code]])
 
-(defn ^:dev/after-load main []
+(defn ^:export ^:dev/after-load init []
   (let [app-node (.getElementById js/document "app")]
     (rdom/render [app] app-node)))

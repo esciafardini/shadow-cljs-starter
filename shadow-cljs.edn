@@ -3,7 +3,7 @@
  {:app
   {:target :browser
    :output-dir "resources/public/assets/js"
-   :modules {:main {:init-fn my-project.core/main}}}}
+   :modules {:main {:init-fn main.core/init}}}}
 
  :deps {:aliases [:cljs]}
 
